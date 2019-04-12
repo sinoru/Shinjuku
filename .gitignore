@@ -50,7 +50,7 @@ Packages
 .build/
 xcuserdata
 DerivedData/
-*.xcodeproj
+#*.xcodeproj
 
 ### Windows ###
 # Windows thumbnail cache files
