@@ -6,8 +6,11 @@ jobs:
   test:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        swift_version: [4.2, 5.0]
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run swift test
-      run: docker run swift test
+    - name: Run swift ${{ matrix.swift_version }} test
+      run: docker run -v .:/mnt swift:${{ matrix.swift_version }} test /mnt
