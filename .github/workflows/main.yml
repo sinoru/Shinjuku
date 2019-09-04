@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run swift test
-      run: docker run -it swift test
+      run: docker run swift test
