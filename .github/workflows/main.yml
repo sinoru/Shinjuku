@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run swift ${{ matrix.swift_version }} test
-      run: docker run -v ${{ github.workspace }}:/mnt swift:${{ matrix.swift_version }} swift test /mnt
+      run: docker run -v ${{ github.workspace }}:/mnt -w /mnt swift:${{ matrix.swift_version }} swift test
