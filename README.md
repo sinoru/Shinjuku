@@ -9,6 +9,10 @@ A Dispatch Extension for Swift
 ## Usage
 
 ```swift
+.package(url: "https://github.com/sinoru/Shinjuku.git", .upToNextMajor(from: "0.0.1"))
+```
+
+```swift
 import Shinjuku 
 
 DispatchQueue.main.safeSync {
